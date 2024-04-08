@@ -1,0 +1,89 @@
+/* Estilos gerais */
+body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.container img {
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+}
+
+.container h2 {
+    text-align: center;
+    color: #146439ef;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="button"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.button_registrar {
+    background-color: #808080fc;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.button_login{
+    background-color: #146439ef;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.button_login:hover {
+    background-color: #005cbf;
+}
+
+.Sign_modes {
+    margin-top: 20px;
+}
+
+.Sign_modes img {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.Sign_modes img:hover {
+    transform: scale(1.1);
+}
