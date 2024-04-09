@@ -1,3 +1,6 @@
+Instalar bilbiotecas
+
+npm install
 
 Comando para iniciar o React
 
