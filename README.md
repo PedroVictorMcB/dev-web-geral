@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+Comando para iniciar o React
+
+Abrir o console
+cd dev-web-geral
+npm start
+
+Comando para iniciar o Json-server
+
+Abrir um novo console
+cd dev-web-geral
+cd src
+json-server --watch server.json --port 3001
+>>>>>>> 159e6eed6e3d4a49375eab4bb44876ae2ff3c6e0
