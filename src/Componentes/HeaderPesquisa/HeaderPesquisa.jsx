@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './HeaderPesquisa.css';
 import logo from '../../Assets/Imagens/NomelogoSemFundo.png'; 
-import userImage from '../../Assets/Imagens/Usuario.png';
+import userImage from '../../Assets/Imagens/Usuario2.png';
 import axios from 'axios';
 
 function HeaderPesquisa({ onSearch }) {
   const [user, setUser] = useState(null);
-
+ 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
