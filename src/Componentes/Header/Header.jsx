@@ -1,23 +1,25 @@
 import React from 'react';
 import "./Header.css";
-function Header() {
+import NomelogoSemFundo from '../../Assets/Imagens/NomelogoSemFundo.png';
+import { Link, useNavigate } from 'react-router-dom';
+
+function Cabecalho() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="Cabecalho">
-      <img src="../../Assets/Imagens/CodeAcademyLogoSemFundo.png" alt="" className="Cabecalho__logo" />
+      <Link to='/'><img src={NomelogoSemFundo} alt="" /></Link>
 
       <div className="Cabecalho__acessos">
         <nav className="Controle_Usuario">
-          <button className="cadastro">
-            <a href="FazerCadastro.html">Cadastrar-se</a>
-          </button>
+          <button className="cadastro" onClick={() =>   navigate('/cadastro') }>Cadastrar</button>
 
-          <button className="login">
-            <a href="FazerLogin.html">Entrar</a>
-          </button>
+          <button className="login" onClick={() =>   navigate('/Login') }>Entrar</button>
         </nav>
       </div>
     </div>
   );
 }
 
-export default Header;
+export default Cabecalho;
