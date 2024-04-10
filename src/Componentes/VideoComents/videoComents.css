@@ -1,0 +1,28 @@
+.videoComents {
+    width: 70.563rem;
+    height: 7.031rem;
+    display: flex;
+    gap: 1.6rem;
+    margin: 0.3rem;
+}
+
+.userImgProfile {
+    width: 3rem;
+    height: 1.5rem;
+}
+
+.userImgProfile img {
+    width: 4rem;
+    border-radius: 1.8rem;
+}
+
+.userComents {
+    flex-wrap: wrap;
+    margin-top: -0.5rem;
+}
+
+.userComents p {
+    width: 58rem;
+    height: 4.438;
+    margin-top: -0.2rem;
+}
