@@ -3,8 +3,6 @@ import Sidebar from '../../Componentes/SideBar/Sidebar';
 import VideoCatalago from '../../Componentes/VideoCatalago/VideoCatalogo';
 import VideoComents from '../../Componentes/VideoComents/VideoComents';
 import '../Cursos/cursos.css';
-import Cabecalho from '../../Componentes/Header/Header';
-import Flooter from '../../Componentes/Flooter/Flooter'
 
 export default function Cursos() {
     return (

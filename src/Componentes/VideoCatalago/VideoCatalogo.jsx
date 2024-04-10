@@ -20,7 +20,7 @@ const VideoCatalogo = () => {
         <div className="ContainerVideo">
             <div className="Video">
                 <h1>{aula.title}</h1>
-                <iframe width="520" height="315" src={aula.video}></iframe>
+                <iframe title="Vídeo da aula" width="520" height="315" src={aula.video}></iframe>
                 <h3>{aula.Descrição}</h3>
             </div>
             <hr className="divisor" />

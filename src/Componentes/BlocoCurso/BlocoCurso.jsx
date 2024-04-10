@@ -21,7 +21,6 @@ function CursoBox({ curso }) {
 function CatalogoCursos() {
   const [cursos, setCursos] = useState([]);
   const [termoPesquisa, setTermoPesquisa] = useState('');
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('http://localhost:3001/cursos')
@@ -42,13 +41,6 @@ function CatalogoCursos() {
     <div>
       <HeaderPesquisa onSearch={handleSearch} />
       <div className='Container_h1'>
-      <button
-          type="button"
-          className="button_catalogo"
-          style={{ backgroundColor: '#146439ef' }}
-          onClick={() => navigate('/')}>
-          Voltar a página principal
-      </button>
         <h1>Catalogo de Cursos</h1>
       </div>
       <div className='Container_CursoBox'>

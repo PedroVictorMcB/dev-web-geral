@@ -3,15 +3,12 @@ import '../Apresentacao/Apresentacao.css';
 import CodeAcademyLogoSemFundoSemLegenda from '../../Assets/Imagens/CodeAcademyLogoSemFundoSemLegenda.png';
 import VideoComponent from '../ContainerVideo/ContainerVideo';
 import Cabecalho from '../Header/Header';
-import { useNavigate } from 'react-router-dom';
 
 function Apresentacao() {
 
     useEffect(() => {
         document.title = "Cody Academy";
     }, []);
-
-    const navigate = useNavigate();
 
     return (
         <>
@@ -43,13 +40,6 @@ function Apresentacao() {
                     </div>
                 </div>
                 <div>
-                <button
-                    type="button"
-                    className="button_catalogo"
-                    style={{ backgroundColor: '#146439ef' }}
-                    onClick={() => navigate('/CatalagodeCursos')}>
-                    Catálogo de Cursos
-                </button>
                 </div>
             </div>
 
