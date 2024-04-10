@@ -12,16 +12,10 @@ export default function Cursos() {
                     <Cabecalho />
                 </div> */}
                 <div className='pageCursos'>
-                    <aside>
-                        <Sidebar />
-                    </aside>
+                    <Sidebar />
                     <div className='contentRelated'>
-                        <div className='videoContent'>
-                            <VideoCatalago />
-                        </div>
-                        <div className='comentContent'>
-                            <VideoComents />
-                        </div>
+                        <VideoCatalago />
+                        <VideoComents />
                     </div>
                 </div>
                 {/* <div className='pageFooter'>
