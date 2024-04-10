@@ -1,6 +1,7 @@
 import React from "react";
 import image from "../../Assets/Imagens/Usuario3.jpeg"; 
 import "../VideoComents/videoComents.css";
+import Descricao from "../Descricao/Descricao"
 
 export default function VideoComents(){
     return(
@@ -12,9 +13,6 @@ export default function VideoComents(){
                 <h4>
                     Carlos Sousa
                 </h4>
-                <p>
-                    Adorei este vídeo. Pude entender melhor como funciona a programação.
-                </p>
             </div>
         </div>
     )

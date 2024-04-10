@@ -11,13 +11,13 @@
           {
             "id": "1",
             "title":"O que e React" ,
-            "video": "https://youtu.be/FXqX7oof0I4?list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO",
+            "video": "https://www.youtube.com/embed/watch?v=FXqX7oof0I4&list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO",
             "Descrição":"Aprenda react"        
           },
           {
             "id": "2",
             "title":"Como instalar" ,
-            "video": "https://youtu.be/Jg6JaEjovJk?list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO",
+            "video": "https://www.youtube.com/embed/watch?v=Jg6JaEjovJk&list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO&index=2",
             "Descrição":"Aprnenda react"   
           }
         ]

@@ -17,8 +17,10 @@ const VideoCatalogo = () => {
 
     return (
         <div className="ContainerVideo">
-            <div className="Video" onClick={abrirVideo}>
-                <img src={curso.image} alt="Thumbnail do vídeo" />
+            <div className="Video">
+            <iframe width="420" height="315"
+                src={aula.video}>
+                </iframe>
                 <p>{aula.title}</p>
                 <p>{aula.Descrição}</p>
             </div>
