@@ -1,0 +1,40 @@
+.Cabecalho {
+    background-color: #03d163;
+    padding: 15px 0;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    position: fixed; 
+    width: 100%; 
+    z-index: 999; 
+    margin-bottom: 150px;
+}
+
+.Cabecalho img {
+    width: 350px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.Cabecalho__acessos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.Controle_Usuario button {
+    font-family: system-ui; /* Corrigido o erro de escrita */
+    background-color: #146439ef;
+    color: white;
+    border: none;
+    padding: 15px 36px;
+    margin: 0 10px;
+    border-radius: 23px;
+}
+
+.Controle_Usuario button:hover {
+    background-color: #005cbf;
+}

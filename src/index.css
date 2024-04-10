@@ -1,200 +1,15 @@
-/* Estilos gerais */
-
 body {
-  font-family: monospace;
   margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-/* Cabeçalho e navegação */
-
-.Cabecalho {
-  background-color: #04994a8d;
-  padding: 15px 0;
-  color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.Cabecalho__logo {
-  width: 102px;
-  margin-left: 61px;
-}
-
-.Cabecalho__acessos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-right: 20px;
-}
-
-.Controle_Usuario button {
-  FONT-FAMILY: system-ui;
-  background-color: #146439ef;
-  color: white;
-  border: none;
-  padding: 15px 36px;
-  margin: 0 10px;
-  border-radius: 23px;
-}
-
-.Controle_Usuario button:hover {
-  background-color: #005cbf;
-}
-
-/* Seção de apresentação */
-.Apresetacao {
-  text-align: center;
-  padding: 20px;
-}
-
-.Logo {
-  display: flex;
-  gap: 45px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.Logo img {
-  max-width: 280px;
-}
-
-.Titulo h1,
-.Titulo h2,
-.Titulo h3 {
-  margin: 10px 0;
-  font-weight: 100;
-}
-
-.titulo_principal {
-  font-size: 40px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Seção de cursos */
-
-.Cursos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: 0;
-}
-
-.Curso {
-  background-color: #e6e6e6;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.ContainerVideo {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-.Video {
-  background: #dfdfdf;
-  padding: 32px;
-  border-radius: 25px;
-}
-
-.divisor {
-  width: 80%;
-  height: 2px;
-  background: #00000042;
-  border-radius: 97px;
-  margin-top: 25px;
-  margin-bottom: 35px;
-}
-
-/* Seção dos professores */
-.Professor {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  background-color: #f2f2f2;
-}
-
-.Professor div {
-  display: flex;
-  margin: 10px;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Professor img {
-  max-width: 100px;
-  border-radius: 50%;
-}
-
-/* Novos professores */
-.Novos_professores {
-  background-color: #d9d9d9;
-  padding: 20px;
-  text-align: center;
-}
-
-.Professor_info {
-  width: 100%;
-}
-
-.Professor_info p {
-  width: 80%;
-}
-
-/* Perguntas Frequentes */
-
-.Perguntas {
-  padding: 20px;
-}
-
-.Pergunta {
-  font-weight: bold;
-}
-
-/* Parceiros */
-
-.Parceiros {
-  text-align: center;
-  padding: 20px;
-}
-
-.Parceiros img {
-  margin: 10px;
-  max-width: 100px;
-}
-
-.Parceiros_logos {
-  display: flex;
-  align-items: center;
-}
-
-/* Footer */
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  bottom: 0;
-  width: 100%;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 button {
@@ -204,7 +19,6 @@ button {
   border: none;
   border-radius: 5px;
   font-weight: bold;
-  text-transform: uppercase;
   transition: background-color 0.3s, transform 0.2s;
   outline: none;
   margin-top: 20px;
@@ -220,16 +34,4 @@ button:active {
   background-color: #004494;
   transform: translateY(1px);
 }
-
-.cadastro,
-.login {
-  margin: 5px;
-}
-
-.ContainerInformacoes {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 20px;
-  background-color: #f2f2f2;
-}
+  

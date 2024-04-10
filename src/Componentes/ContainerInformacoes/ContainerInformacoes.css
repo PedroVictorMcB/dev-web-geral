@@ -1,0 +1,12 @@
+.ContainerInformacoes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f2f2f2;
+    font-size: large;
+}
+
+.Perguntas {
+    font-size: large;
+}

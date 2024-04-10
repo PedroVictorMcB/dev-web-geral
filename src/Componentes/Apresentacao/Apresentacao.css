@@ -1,1 +1,67 @@
+.Apresentacao {
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.Logo {
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Logo img {
+    max-width: 280px;
+}
+
+.Titulo h1,
+.Titulo h2,
+.Titulo h3 {
+    margin: 10px 0;
+    font-weight: 100;
+}
+
+.titulo_principal {
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.Cursos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+.Curso {
+    background-color: #e6e6e6;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ContainerVideo {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.Video {
+    background: #dfdfdf;
+    padding: 32px;
+    border-radius: 25px;
+}
+
+.divisor {
+    width: 80%;
+    height: 2px;
+    background: #00000042;
+    border-radius: 97px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
 
