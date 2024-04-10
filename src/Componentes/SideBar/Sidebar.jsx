@@ -2,63 +2,35 @@ import React from "react";
 import './Sidebar.css';
 import logo from '../../Assets/Imagens/CodeAcademyLogoSemFundo.png';
 
-
 const Sidebar = () => {
+    const handleVideoClick = (aula) => {
+        console.log(`Abrir vídeo da ${aula}`);
+    };
+
     return (
         <div className="sidebar">
-
-        <nav className="sidebar__navigation">
-            <div className="logo">
-                <a href="">
-                    <img src={logo} alt="logo do Spotify" />
-                </a>
-            </div>
-            <ul>
-                <li>
-                    <a>
-                        <span className="fa fa-home"></span>
-                        <span>Início</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span className="fa fa-search"></span>
-                        <span>Buscar</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div className="library">
-            <div className="library__content">
-                <button className="library__button">
-                    <span className="fa fas fa-book"></span>
-                    <span>Sua Biblioteca</span>
-                </button>
-                <span className="fa fa-plus"></span>
-            </div>
-
-            <section className="section-playlist">
-                <div className="section-playlist__content">
-                    <span className="text title">Crie sua primeira playlist</span>
-                    <span className="text subtitle">É fácil, vamos te ajudar.</span>
-                    <button className="section-playlist__button">
-                        <span>Criar playlist</span>
-                    </button>
+            <nav className="sidebar__navigation">
+                <div className="logo">
+                    <img src={logo} alt="" />
                 </div>
-            </section>
-
-            <div className="cookies">
-                <a href="">Cookies</a>
-            </div>
-
-            <div className="languages">
-                <button className="languages__button">
-                    <span className="fa fa-globe"></span>
-                    <span>Português do Brasil</span>
-                </button>
+            </nav>
+            <div >
+            <span className="text title">Cursos</span>
+            <ul className="course-list">
+                <li className="course-item">
+                    <button className="video-button" onClick={() => handleVideoClick("Aula 1")}>
+                        <span>Aula 1: Introdução ao Phyton</span>
+                    </button>
+                </li>
+                <li className="course-item">
+                    <button className="video-button" onClick={() => handleVideoClick("Aula 2")}>
+                        <span>Aula 2: Crição de um projeto Phyton</span>
+                    </button>
+                </li>
+                {/* Adicione mais aulas conforme necessário */}
+            </ul>
             </div>
         </div>
-    </div>
     )
 }
 
