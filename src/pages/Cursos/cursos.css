@@ -1,3 +1,8 @@
+.containerPageCursos {
+    flex-wrap: wrap;
+    gap: 10rem;
+}
+
 .pageCursos {
     display: flex;
     gap: 18rem;

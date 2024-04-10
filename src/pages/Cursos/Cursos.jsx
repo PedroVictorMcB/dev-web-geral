@@ -3,21 +3,33 @@ import Sidebar from '../../Componentes/SideBar/Sidebar';
 import VideoCatalago from '../../Componentes/VideoCatalago/VideoCatalogo';
 import VideoComents from '../../Componentes/VideoComents/VideoComents';
 import '../Cursos/cursos.css';
+import Cabecalho from '../../Componentes/Header/Header';
+import Flooter from '../../Componentes/Flooter/Flooter'
 
 export default function Cursos() {
     return (
-        <div className='pageCursos'>
-            <aside>
-                <Sidebar />
-            </aside>
-            <div className='contentRelated'>
-                <div className='videoContent'>
-                    <VideoCatalago />
+        <>
+            <div className='containerPageCursos'>
+                {/* <div className='pageHeader'>
+                    <Cabecalho />
+                </div> */}
+                <div className='pageCursos'>
+                    <aside>
+                        <Sidebar />
+                    </aside>
+                    <div className='contentRelated'>
+                        <div className='videoContent'>
+                            <VideoCatalago />
+                        </div>
+                        <div className='comentContent'>
+                            <VideoComents />
+                        </div>
+                    </div>
                 </div>
-                <div className='comentContent'>
-                    <VideoComents />
-                </div>
+                {/* <div className='pageFooter'>
+                    <Flooter />
+                </div> */}
             </div>
-        </div>
+        </>
     );
 }
