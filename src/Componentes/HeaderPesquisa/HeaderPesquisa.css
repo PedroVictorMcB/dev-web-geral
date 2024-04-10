@@ -1,15 +1,17 @@
 .CabecalhoP {
-    background-color: #04994a8d;
+    background-color: #03d163;
     padding: 15px 0;
     color: #ffffff;
     display: flex;
+    height: 53px;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .CabecalhoP__logo {
-    width: 300px;
-    margin-left: 20px;
+  width: 350px;
+  height: 50px;
+  margin-left: 10px;
 }
 
 .Barra-Pesquisa {
@@ -34,4 +36,5 @@
   
   .UserName {
     margin-right: 10px;
+    color: black;
   }

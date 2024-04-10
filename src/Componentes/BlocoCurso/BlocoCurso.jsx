@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import "../BlocoCurso/BlocoCurso.css"
 import HeaderPesquisa from '../HeaderPesquisa/HeaderPesquisa'; 
+import { useNavigate } from 'react-router-dom';
 
 function CursoBox({ curso }) {
   const { image, title, instructor, duration } = curso;
+  const navigate = useNavigate();
 
   return (
     <div className="CursoBox">
@@ -11,7 +13,7 @@ function CursoBox({ curso }) {
       <h2>{title}</h2>
       <p>Professor: {instructor}</p> 
       <p>Duração: {duration}</p>
-      <button>Inscreva-se</button>
+      <button onClick={() => navigate("/cursos")}>Inscreva-se</button>
     </div>
   );
 }
@@ -19,6 +21,7 @@ function CursoBox({ curso }) {
 function CatalogoCursos() {
   const [cursos, setCursos] = useState([]);
   const [termoPesquisa, setTermoPesquisa] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('http://localhost:3001/cursos')
@@ -38,10 +41,21 @@ function CatalogoCursos() {
   return (
     <div>
       <HeaderPesquisa onSearch={handleSearch} />
-      <h1>Catalogo de Cursos</h1>
+      <div className='Container_h1'>
+      <button
+          type="button"
+          className="button_catalogo"
+          style={{ backgroundColor: '#146439ef' }}
+          onClick={() => navigate('/')}>
+          Voltar a página principal
+      </button>
+        <h1>Catalogo de Cursos</h1>
+      </div>
+      <div className='Container_CursoBox'>
       {cursosFiltrados.map(curso => (
         <CursoBox key={curso.id} curso={curso} />
       ))}
+      </div>
     </div>
   );
 }

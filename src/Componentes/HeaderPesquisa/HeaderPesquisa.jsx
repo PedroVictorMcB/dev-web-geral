@@ -6,7 +6,7 @@ import axios from 'axios';
 
 function HeaderPesquisa({ onSearch }) {
   const [user, setUser] = useState(null);
- 
+
   useEffect(() => {
     const fetchUserData = async () => {
       try {

@@ -11,11 +11,11 @@ function Cabecalho() {
     <div className="Cabecalho">
       <Link to='/'><img src={NomelogoSemFundo} alt="" /></Link>
 
-      <div className="Cabecalho__acessos">
+      <div className="__acessos">
         <nav className="Controle_Usuario">
-          <button className="cadastro" onClick={() =>   navigate('/cadastro') }>Cadastrar</button>
+          <button className="cadastro" onClick={() => navigate('/cadastro') }>Cadastrar</button>
 
-          <button className="login" onClick={() =>   navigate('/Login') }>Entrar</button>
+          <button className="login" onClick={() => navigate('/Login') }>Entrar</button>
         </nav>
       </div>
     </div>

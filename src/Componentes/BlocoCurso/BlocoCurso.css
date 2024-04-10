@@ -1,3 +1,14 @@
+.Container_h1{
+  margin-left: 50px;
+}
+
+.Container_CursoBox{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr; 
+  margin-left: 50px;
+}
+
 .CursoBox-list {
     display: flex;
     justify-content: center;
