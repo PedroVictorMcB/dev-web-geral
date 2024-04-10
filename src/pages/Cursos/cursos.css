@@ -1,0 +1,16 @@
+.pageCursos {
+    display: flex;
+    gap: 18rem;
+}
+
+.contentRelated {
+    flex-wrap: wrap;
+}
+
+.comentContent {
+    margin-left: 3rem;
+}
+
+.videoContent {
+    margin-right: 3rem;
+}
