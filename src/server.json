@@ -111,6 +111,7 @@
       "instructor": "Thiago Almeida",
       "duration": "5 semanas",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0UwCF_o_Dmq3pcQwVPAcHquwJckGUFKydbA&s"
+
     }
   ],
   "usuarios": [
@@ -119,24 +120,6 @@
       "nome": "Afonso Santana",
       "email": "JavaMAN@gmail.com",
       "senha": "senha123"
-    },
-    {
-      "id": "5e5f",
-      "nome": "1",
-      "email": "teste@teste.com",
-      "senha": "1"
-    },
-    {
-      "id": 3,
-      "nome": "1",
-      "email": "teste@teste.com",
-      "senha": "1"
-    },
-    {
-      "id": 4,
-      "nome": "1",
-      "email": "teste@teste.com",
-      "senha": "1"
     }
   ]
 }

@@ -8,6 +8,7 @@ import Main from './pages/Main'
 import CadastroPage from './pages/CadastroPage';
 import LoginPage from './pages/LoginPage';
 import CatalogoCursos from './pages/CatalogoCursos';
+import Sidebar from './Componentes/SideBar/Sidebar';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -17,6 +18,8 @@ ReactDOM.render(
         <Route path="cadastro" element={<CadastroPage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="CatalagodeCursos" element={<CatalogoCursos />} />
+        <Route path="testes" element={<Sidebar/>} />
+
       </Route>
     </Routes>
   </BrowserRouter>,
