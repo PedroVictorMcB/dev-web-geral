@@ -7,7 +7,7 @@ function CursoBox({ curso }) {
 
   return (
     <div className="CursoBox">
-      <img src={image} alt={title} />
+      <img src={image} alt={title} style={{ width: '100%', height: 'auto', borderRadius: '5px' }} />
       <h2>{title}</h2>
       <p>Professor: {instructor}</p> 
       <p>Duração: {duration}</p>
@@ -38,10 +38,12 @@ function CatalogoCursos() {
   return (
     <div>
       <HeaderPesquisa onSearch={handleSearch} />
-      <h1>Catalogo de Cursos</h1>
-      {cursosFiltrados.map(curso => (
-        <CursoBox key={curso.id} curso={curso} />
-      ))}
+      <h1 style={{ textAlign: 'center' }}>Catálogo de Cursos</h1>
+      <div className="CursoBox-list"> {/* Classe adicionada para estilização flex */}
+        {cursosFiltrados.map(curso => (
+          <CursoBox key={curso.id} curso={curso} />
+        ))}
+      </div>
     </div>
   );
 }
