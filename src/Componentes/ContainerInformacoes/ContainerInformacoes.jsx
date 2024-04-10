@@ -8,7 +8,7 @@ function Faq() {
                 <h2>Perguntas Frequentes</h2>
                 <div className="Perguntas_frequentes">
                     <p className="Pergunta">Como faço para iniciar?</p>
-                    <p className="Resposta">Basta clicar no botão de "Inscreva-se" na parte superior desta página</p>
+                    <p className="Resposta">Basta clicar no botão de <strong><em>Cadastrar</em></strong> na parte superior desta página</p>
 
                     <p className="Pergunta">Os Cursos possuem certificados?</p>
                     <p className="Resposta">Sim, Todos nossos Cursos possuem certificado.</p>
