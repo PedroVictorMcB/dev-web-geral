@@ -4,6 +4,10 @@
     display: flex;
     gap: 1.6rem;
     margin: 0.3rem;
+    background-color: white;
+    padding: 20px;
+    border-radius: 17px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .userImgProfile {

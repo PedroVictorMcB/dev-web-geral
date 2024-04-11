@@ -33,13 +33,16 @@ function HeaderPesquisa({ onSearch }) {
   return (
     <div className="CabecalhoP">
       <img src={logo} alt="Logo" className="CabecalhoP__logo" />
+
       <div className="Barra-Pesquisa">
         <input
           type="text"
+          className='input_pesquisa'
           placeholder="Pesquisar curso..."
           onChange={identificadorPesquisa}
         />
       </div>
+
       <div className="user-info">
         {user && <span className="UserName">Bem-vindo, {user.nome}</span>}
         <img src={userImage} alt="User" className="user-image" />
