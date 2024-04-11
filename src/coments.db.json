@@ -1,0 +1,35 @@
+
+  {
+  "coments": [
+    {
+      "id": "1",
+      "nome": "Afonso Santana",
+      "coment": "Adorei o curso. Me sinto uma pessoa melhor",
+      "foto": "../../Assets/Imagens/Usuario.png"
+    },
+    {
+      "id": "2",
+      "nome": "Joy Stash",
+      "coment": "Don't see the video but Love it too much. 5 Stars!!",
+      "foto": "https://this-person-does-not-exist.com/img/avatar-gened0675329acf22377e1ce28ad806f62d.jpg"
+    },
+    {
+      "id": "3",
+      "nome": "Julia Seixas",
+      "coment": "Aprendi este curso pq prefiro ser essa metamorfose ambulante",
+      "foto": "https://this-person-does-not-exist.com/img/avatar-gen113320a5408bc25ee1c6eb402393166d.jpg"
+    },
+    {
+      "id": "4",
+      "nome": "José Ramos",
+      "coment": "Curso Top! Incrível.",
+      "foto": "https://this-person-does-not-exist.com/img/avatar-gen1187a6bc633380325b5b92f5cc41b63d.jpg"
+    },
+    {
+      "id": "5",
+      "nome": "Carlos Sousa",
+      "coment": "Já sabia tudo não agregou em nada!",
+      "foto": "https://this-person-does-not-exist.com/img/avatar-gen11b0f7fc8da48b9e703818375619f283.jpg"
+    }
+  ]
+}

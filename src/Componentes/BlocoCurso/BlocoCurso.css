@@ -1,3 +1,14 @@
+.Container_h1{
+  margin-left: 50px;
+}
+
+.Container_CursoBox{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr; 
+  margin-left: 50px;
+}
+
 .CursoBox-list {
   display: flex;
   justify-content: flex-start; 
@@ -38,6 +49,35 @@ button:hover {
 @media (max-width: 600px) {
   
   .CursoBox {
-    width: calc(100% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
-}
+  
+
+  .info_curso{
+    margin-top: 10px;
+  }
+
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .Container_h1{
+    text-align: center;
+    font-size: large;
+  }

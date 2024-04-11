@@ -5,7 +5,16 @@
     padding: 20px;
 }
 
+.espacamento{
+    display: flex;
+    align-items: center;
+}
+
 .Video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     background: #dfdfdf;
     padding: 32px;
     border-radius: 25px;

@@ -32,6 +32,8 @@ function Login() {
                 navigate('/CatalagodeCursos');
             } else {
                 alert('Usuário inválido!');
+                setEmail('');
+                setPassword('');
             }
         } catch (error) {
             console.error('Erro ao obter dados dos usuários:', error);

@@ -1,7 +1,7 @@
 import React from "react";
 import './Sidebar.css';
 import logo from '../../Assets/Imagens/CodeAcademyLogoSemFundo.png';
-
+import server from '../../server.json';
 const Sidebar = () => {
     const handleVideoClick = (aula) => {
         console.log(`Abrir vídeo da ${aula}`);
@@ -14,21 +14,24 @@ const Sidebar = () => {
                     <img src={logo} alt="" />
                 </div>
             </nav>
-            <div >
-            <span className="text title">Cursos</span>
-            <ul className="course-list">
-                <li className="course-item">
-                    <button className="video-button" onClick={() => handleVideoClick("Aula 1")}>
-                        <span>Aula 1: Introdução ao Phyton</span>
-                    </button>
-                </li>
-                <li className="course-item">
-                    <button className="video-button" onClick={() => handleVideoClick("Aula 2")}>
-                        <span>Aula 2: Crição de um projeto Phyton</span>
-                    </button>
-                </li>
-                {/* Adicione mais aulas conforme necessário */}
-            </ul>
+            <div>
+                <span className="text title">Cursos</span>
+                <ul className="course-list">
+                    {server.cursos.map(curso => (
+                        <li key={curso.id} className="course-item">
+                            <span className="course-title">{curso.title}</span>
+                            <ul className="aula-list">
+                                {curso.aulas.map(aula => (
+                                    <li key={aula.id} className="aula-item">
+                                        <button className="video-button" onClick={() => handleVideoClick(aula.title)}>
+                                            <span>{aula.title}</span>
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     )

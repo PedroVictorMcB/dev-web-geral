@@ -1,0 +1,11 @@
+.Descricao {
+    display: flex;
+    flex-direction: column;
+    margin-left:400px;
+}
+
+.Comentario_info {
+    font-size: 10px;
+    color: gray;
+    margin-left: 15px;
+}
