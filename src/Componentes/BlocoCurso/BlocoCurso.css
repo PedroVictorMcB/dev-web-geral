@@ -20,10 +20,13 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
-  margin: 10px; 
-  width: calc(33.333% - 20px); 
-  box-sizing: border-box; 
+  margin: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 
 button {
   background-color: #007bff;
@@ -47,18 +50,6 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-  
-  .CursoBox {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  }
-  
 
   .info_curso{
     margin-top: 10px;
@@ -81,3 +72,4 @@ button:hover {
     text-align: center;
     font-size: large;
   }
+}
