@@ -9,12 +9,11 @@ const VideoCatalogo = () => {
     const curso = server.cursos[0];
     const aula = curso.aulas[selectedAulaIndex]; 
 
+    const navigate = useNavigate();
 
     const handleAulaChange = (index) => {
         setSelectedAulaIndex(index); 
     };
-
-    const navigate = useNavigate()
 
     return (
         <div className="ContainerVideo">

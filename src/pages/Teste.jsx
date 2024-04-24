@@ -1,12 +1,10 @@
 import React from 'react';
-import Sidebar from '../Componentes/SideBar/Sidebar';
-import VideoCatalago from '../Componentes/VideoCatalago/VideoCatalogo';
+import CursosAdicionar from '../Componentes/CursosAdicionar/CursosAdicionar';
 
 export default function Sidesbar() {
     return (
         <div>
-            <Sidebar />
-            <VideoCatalago />
+            <CursosAdicionar />
         </div>
     );
 }
