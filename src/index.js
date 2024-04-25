@@ -19,7 +19,7 @@ ReactDOM.render(
         <Route path="cadastro" element={<CadastroPage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="CatalagodeCursos" element={<CatalogoCursos />} />
-        <Route path="testes" element={<Teste/>}/>
+        <Route path="testes" element={<Teste />}/>
         <Route path="cursos" element={<Cursos />} />
       </Route>
     </Routes>
