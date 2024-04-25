@@ -45,7 +45,17 @@
       "id": "1",
       "nome": "Afonso Santana",
       "email": "JavaMAN@gmail.com",
-      "senha": "senha123"
+      "senha": "senha123",
+      "tag": "aluno"
+    },
+    {
+      "id": "2",
+      "nome": "Osvaldo Prado Quimera",
+      "email": "QuimeraOP@gmail.com",
+      "senha": "boss3000",
+      "tag": "professor"
     }
   ]
 }
+
+// adicionar uma variável que defina o tipo de usuário que está cadastrado em Usuários, entre 'aluno' e 'professor', a partir da realização do cadastro.
