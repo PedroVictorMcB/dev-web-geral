@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../ContainerLogin/ContainerLogin.css';
 import logo from '../../Assets/Imagens/CodeAcademyLogoSemFundo.png';
 import google from '../../Assets/Imagens/SignGoogle.png';
+//criar um objeto user logo no inicio
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -25,8 +26,10 @@ function Login() {
 
             const data = await response.json();
 
+            //testar replicar esta comparação num if antes da linha 33
             const user = data.find(user => user.email === email && user.senha === password);
 
+            //testar acessar a key tag em user
             if (user) {
                 alert('Login bem-sucedido!');
                 navigate('/CatalagodeCursos');
