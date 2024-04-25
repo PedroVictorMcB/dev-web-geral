@@ -1,0 +1,25 @@
+body {
+    overflow-x: hidden;
+}
+
+.contentRelated {
+    flex-wrap: wrap;
+    width: calc(100vw - 400px);
+    margin-left: auto;
+    padding-bottom: 1.5rem;
+}
+
+.videoComents {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    overflow-y: auto;
+    width: calc(100vw - 500px);
+    overflow-x: hidden;
+}
+
+.videoComents > div {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+}

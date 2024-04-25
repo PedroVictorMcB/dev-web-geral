@@ -3,10 +3,15 @@ import './HeaderPesquisa.css';
 import logo from '../../Assets/Imagens/NomelogoSemFundo.png'; 
 import userImage from '../../Assets/Imagens/Usuario2.png';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 function HeaderPesquisa({ onSearch }) {
   const [user, setUser] = useState(null);
- 
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     const fetchUserData = async () => {
       try {
@@ -28,16 +33,26 @@ function HeaderPesquisa({ onSearch }) {
   return (
     <div className="CabecalhoP">
       <img src={logo} alt="Logo" className="CabecalhoP__logo" />
+
       <div className="Barra-Pesquisa">
         <input
           type="text"
+          className='input_pesquisa'
           placeholder="Pesquisar curso..."
           onChange={identificadorPesquisa}
         />
       </div>
+
       <div className="user-info">
         {user && <span className="UserName">Bem-vindo, {user.nome}</span>}
         <img src={userImage} alt="User" className="user-image" />
+        <button
+          type="button"
+          className="button_catalogo"
+          style={{ backgroundColor: '#146439ef' }}
+          onClick={() => navigate('/')}>
+          <FontAwesomeIcon icon={faRightFromBracket} />
+        </button>
       </div>
     </div>
   );

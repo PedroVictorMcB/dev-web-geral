@@ -1,16 +1,58 @@
+.Container_h1{
+  margin-left: 50px;
+}
+
+.Container_CursoBox{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr; 
+  margin-left: 50px;
+}
+
 .CursoBox-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
+  display: flex;
+  justify-content: flex-start; 
+  flex-wrap: wrap;
+  margin: -10px; 
+}
+
+.CursoBox {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px; 
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 960px) {
+ 
   .CursoBox {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    width: 300px;
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+
+  .info_curso{
+    margin-top: 10px;
   }
 
   button {
@@ -25,3 +67,9 @@
   button:hover {
     background-color: #0056b3;
   }
+
+  .Container_h1{
+    text-align: center;
+    font-size: large;
+  }
+}
