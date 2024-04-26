@@ -30,6 +30,7 @@ function Login() {
             const user = data.find(user => user.email === email && user.senha === password);
 
             //testar acessar a key tag em user
+            //se user.tag == aluno, mantem; se user.tag == professor, navega para /professorPage.jsx
             if (user) {
                 alert('Login bem-sucedido!');
                 navigate('/CatalagodeCursos');
