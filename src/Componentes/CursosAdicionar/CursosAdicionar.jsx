@@ -24,6 +24,12 @@ function CursoForm() {
     });
   };
 
+  const removeAula = (index) => {
+    const newAulas = [...cursoData.aulas];
+    newAulas.splice(index, 1);
+    setCursoData({ ...cursoData, aulas: newAulas });
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -123,7 +129,9 @@ function CursoForm() {
               required
             ></textarea><br />
             <hr />
+            <button type="button" onClick={() => removeAula(index)}>Remover Aula</button><br />
           </div>
+          
         ))}
       </div>
       <button type="button" onClick={addAula}>Adicionar uma nova aula</button><br /><br />

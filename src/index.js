@@ -8,7 +8,7 @@ import Main from './pages/Main'
 import CadastroPage from './pages/CadastroPage';
 import LoginPage from './pages/LoginPage';
 import CatalogoCursos from './pages/CatalogoCursos';
-import Teste from './pages/Teste';
+import CursoAdicionar from './pages/ProfessorPage.jsx';
 import Cursos from './pages/Cursos/Cursos';
 
 ReactDOM.render(
@@ -19,7 +19,7 @@ ReactDOM.render(
         <Route path="cadastro" element={<CadastroPage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="CatalagodeCursos" element={<CatalogoCursos />} />
-        <Route path="testes" element={<Teste/>}/>
+        <Route path="CursoAdicionar" element={<CursoAdicionar/>}/>
         <Route path="cursos" element={<Cursos />} />
       </Route>
     </Routes>
