@@ -12,7 +12,6 @@ function Apresentacao() {
 
     return (
         <>
-            <Cabecalho />
             <div className="Apresentacao">
                 <div className="Logo">
                     <img src={CodeAcademyLogoSemFundoSemLegenda} alt="" />

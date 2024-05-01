@@ -1,0 +1,4 @@
+
+// adicionar uma variável que defina o tipo de usuário que está cadastrado em Usuários, entre 'aluno' e 'professor', a partir da realização do cadastro.
+
+// SERVIDOR UTILIZADO SERÁ NODEJS

@@ -16,7 +16,6 @@ export default function Main() {
                 <Faq />
                 <Parceiros />
             </div>
-            <Flooter />
         </div>
     )
 }
