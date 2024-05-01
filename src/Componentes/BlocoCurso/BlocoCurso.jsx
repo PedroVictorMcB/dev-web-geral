@@ -4,7 +4,7 @@ import HeaderPesquisa from "../HeaderPesquisa/HeaderPesquisa";
 import { useNavigate } from "react-router-dom";
 
 function CursoBox({ curso }) {
-  const { image, title, instructor, duration } = curso;
+  const { id, image, title, instructor, duration } = curso;
   const navigate = useNavigate();
 
   return (
@@ -15,8 +15,7 @@ function CursoBox({ curso }) {
         <p>Professor: {instructor}</p>
         <p>Duração: {duration}</p>
       </div>
-
-      <button onClick={() => navigate("/cursos")}>Inscreva-se</button>
+      <button onClick={() => navigate(`/cursos/${id}`)}>Inscreva-se</button>
     </div>
   );
 }
