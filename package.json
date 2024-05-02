@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start:server": "json-server --watch src/server.json --port 3001"
+    "start:server": "json-server --watch ./src/server.json --port 3001"
   },
   "eslintConfig": {
     "extends": [
