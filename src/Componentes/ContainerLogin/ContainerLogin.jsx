@@ -28,10 +28,17 @@ function Login() {
             const user = data.find(user => user.email === email && user.senha === password);
 
             if (user) {
-                alert('Login bem-sucedido!');
-                navigate('/CatalagodeCursos');
+                if (user.tag === 'aluno') {
+                    alert('Login bem-sucedido como aluno!');
+                    navigate('/CatalagodeCursos'); 
+                } else if (user.tag === 'professor') {
+                    alert('Login bem-sucedido como professor!');
+                    navigate('/DashboardProfessor'); 
+                } else {
+                    alert('Tipo de usuário inválido!');
+                }
             } else {
-                alert('Usuário inválido!');
+                alert('Usuário ou senha inválidos!');
                 setEmail('');
                 setPassword('');
             }

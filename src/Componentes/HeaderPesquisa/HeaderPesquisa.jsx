@@ -5,17 +5,17 @@ import userImage from '../../Assets/Imagens/Usuario2.png';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 function HeaderPesquisa({ onSearch }) {
   const [user, setUser] = useState(null);
-
   const navigate = useNavigate();
+  const { userId } = useParams(); // Obter userId dos parâmetros da URL
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/usuarios/1'); 
+        const response = await axios.get(`http://localhost:3001/usuarios/${userId}`);
         setUser(response.data);
       } catch (error) {
         console.error('Erro ao buscar os dados do usuário:', error);
@@ -23,14 +23,17 @@ function HeaderPesquisa({ onSearch }) {
     };
 
     fetchUserData();
-  }, []);
+  }, [userId]); 
 
-  const identificadorPesquisa = event => {
+ 
+
+  const handleSearch = event => {
     const searchTerm = event.target.value;
     onSearch(searchTerm);
   };
 
   return (
+   
     <div className="CabecalhoP">
       <img src={logo} alt="Logo" className="CabecalhoP__logo" />
 
@@ -39,12 +42,14 @@ function HeaderPesquisa({ onSearch }) {
           type="text"
           className='input_pesquisa'
           placeholder="Pesquisar curso..."
-          onChange={identificadorPesquisa}
+          onChange={handleSearch}
         />
       </div>
 
       <div className="user-info">
-        {user && <span className="UserName">Bem-vindo, {user.nome}</span>}
+        {user && user.nome && (
+          <span className="UserName">Bem-vindo, {user.nome}</span>
+        )}
         <img src={userImage} alt="User" className="user-image" />
         <button
           type="button"
