@@ -37,7 +37,7 @@ export default function ProfessorPage(){
             });
 
             if (response.ok) {
-                navigate('/ProfessorAddAula');
+                navigate(`/ProfessorAddAula?cursoId=${newCurso.id}`);
             } else {
                 alert('Ocorreu um erro ao cadastrar seu curso.');
             }
@@ -66,7 +66,7 @@ export default function ProfessorPage(){
                             <input type="text" id="image" name="image" placeholder="Cole aqui o link da imagem da capa do seu curso" value={image} onChange={(e) => setImage(e.target.value)} />
                             <label htmlFor="duration">Insira a duração do curso</label>
                             <input type="text" id="duration" name="duration" placeholder="Insira o tempo total do curso completo" value={duration} onChange={(e) => setDuration(e.target.value)} />
-                            <label htmlFor="descricao">Insira a duração do curso</label>
+                            <label htmlFor="descricao">Insira a descrição do curso</label>
                             <input type="text" id="descricao" name="descricao" placeholder="Insira o tempo total do curso completo" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
                             <input type="submit" value="Adicionar" className="addCurso-btn" />
                         </form>
