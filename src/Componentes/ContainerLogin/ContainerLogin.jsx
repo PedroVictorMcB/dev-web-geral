@@ -28,6 +28,7 @@ function Login() {
             const user = data.find(user => user.email === email && user.senha === password);
 
             if (user) {
+                localStorage.setItem("usuarioLogado", JSON.stringify(user));
                 if (user.tag === 'aluno') {
                     alert('Login bem-sucedido como aluno!');
                     navigate('/CatalagodeCursos'); 

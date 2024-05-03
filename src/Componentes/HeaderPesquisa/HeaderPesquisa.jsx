@@ -10,20 +10,23 @@ import { useNavigate, useParams } from 'react-router-dom';
 function HeaderPesquisa({ onSearch }) {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
-  const { userId } = useParams(); // Obter userId dos parâmetros da URL
+  //const { userId } = useParams(); // Obter userId dos parâmetros da URL
 
   useEffect(() => {
-    const fetchUserData = async () => {
+    /*const fetchUserData = async () => {
       try {
         const response = await axios.get(`http://localhost:3001/usuarios/${userId}`);
         setUser(response.data);
       } catch (error) {
         console.error('Erro ao buscar os dados do usuário:', error);
-      }
-    };
+      }*/
 
-    fetchUserData();
-  }, [userId]); 
+      const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+      setUser(usuarioLogado);
+    //};
+
+    //fetchUserData();
+  }, []); 
 
  
 
