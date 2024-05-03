@@ -1,16 +1,19 @@
-import React from 'react';
-import './App.css';
-import { Outlet } from 'react-router-dom';
-
+import React, { useEffect } from "react";
+import "./App.css";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  return ( 
-    <div className="App">
-      <main>
-        <Outlet />
-      </main>
-    </div>
-  );
+    useEffect(() => {
+        document.title = "CodeAcademy";
+    }, []);
+
+    return (
+        <div className="App">
+            <main>
+                <Outlet />
+            </main>
+        </div>
+    );
 }
 
 export default App;

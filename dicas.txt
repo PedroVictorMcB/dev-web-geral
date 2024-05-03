@@ -1,0 +1,6 @@
+
+// adicionar uma variável que defina o tipo de usuário que está cadastrado em Usuários, entre 'aluno' e 'professor', a partir da realização do cadastro.
+
+// SERVIDOR UTILIZADO SERÁ NODEJS
+
+//git push origin Oficina -u = vincula sua branch local com a remota. Após isto vc pode dar apenas git push na mesma branch sem precisar citar origin
