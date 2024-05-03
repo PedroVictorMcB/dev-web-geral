@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import useFormulary from "../../Hooks/useFormulary";
 import Input from "../../Componentes/Input/Input";
 import useQuery from "../../Hooks/useQuery";
@@ -79,7 +79,7 @@ export default function ProfessorAddAula() {
                                 failedToAdd ? (
                                     <p>Erro ao adicionar sua aula</p>
                                 ) : (
-                                    <p>Aula adicionad com sucesso!</p>
+                                    <p>Aula adicionada com sucesso!</p>
                                 )
                             ) : (
                                 ""

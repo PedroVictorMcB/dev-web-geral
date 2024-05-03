@@ -4,3 +4,11 @@
 // SERVIDOR UTILIZADO SERÁ NODEJS
 
 //git push origin Oficina -u = vincula sua branch local com a remota. Após isto vc pode dar apenas git push na mesma branch sem precisar citar origin
+
+<button type="button" onClick={() => removeAula(index)}>Remover Aula</button><br />
+
+const removeAula = (index) => {
+    const newAulas = [...cursoData.aulas];
+    newAulas.splice(index, 1);
+    setCursoData({ ...cursoData, aulas: newAulas });
+  };

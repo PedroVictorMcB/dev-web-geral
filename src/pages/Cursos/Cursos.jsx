@@ -1,20 +1,20 @@
-import React from 'react';
-import Sidebar from '../../Componentes/SideBar/Sidebar';
-import VideoCatalago from '../../Componentes/VideoCatalago/VideoCatalogo';
-import VideoComents from '../../Componentes/VideoComents/VideoComents';
-import '../Cursos/cursos.css';
+import React from "react";
+import Sidebar from "../../Componentes/SideBar/Sidebar";
+import VideoCatalogo from "../../Componentes/VideoCatalago/VideoCatalogo";
+import VideoComents from "../../Componentes/VideoComents/VideoComents";
+import "../Cursos/cursos.css";
 
 export default function Cursos() {
     return (
         <>
-            <div className='containerPageCursos'>
+            <div className="containerPageCursos">
                 {/* <div className='pageHeader'>
                     <Cabecalho />
                 </div> */}
-                <div className='pageCursos'>
+                <div className="pageCursos">
                     <Sidebar />
-                    <div className='contentRelated'>
-                        <VideoCatalago />
+                    <div className="contentRelated">
+                        <VideoCatalogo />
                         <VideoComents />
                     </div>
                 </div>

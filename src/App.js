@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 function App() {
     useEffect(() => {
-        document.title = "CodeAcademy";
+        document.title = "CodeCademy";
     }, []);
 
     return (
