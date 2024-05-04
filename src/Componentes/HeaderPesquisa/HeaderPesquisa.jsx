@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "./HeaderPesquisa.css";
 import logo from "../../Assets/Imagens/NomelogoSemFundo.png";
-import userImage from "../../Assets/Imagens/Usuario2.png";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 function HeaderPesquisa({ onSearch }) {
     const [user, setUser] = useState(null);
 
     const navigate = useNavigate();
+    const [cookies, setCookie, removeCookie] = useCookies();
 
     useEffect(() => {
         const fetchUserData = async () => {
             try {
                 // deixar isso dinamico
                 const response = await axios.get(
-                    "http://localhost:3001/usuarios/1"
+                    `http://localhost:3001/usuarios/${cookies["user-info"]?.id}`
                 );
                 setUser(response.data);
             } catch (error) {
@@ -26,11 +27,16 @@ function HeaderPesquisa({ onSearch }) {
         };
 
         fetchUserData();
-    }, []);
+    }, [cookies]);
 
     const identificadorPesquisa = (event) => {
         const searchTerm = event.target.value;
         onSearch(searchTerm);
+    };
+
+    const handleLogout = () => {
+        removeCookie("user-info");
+        navigate("/");
     };
 
     return (
@@ -48,14 +54,18 @@ function HeaderPesquisa({ onSearch }) {
 
             <div className="user-info">
                 {user && (
-                    <span className="UserName">Bem-vindo, {user.nome}</span>
+                    <span className="UserName">Bem-vindo, {user?.nome}</span>
                 )}
-                <img src={userImage} alt="User" className="user-image" />
+                <img
+                    src={user?.image}
+                    alt={user?.nome}
+                    className="user-image"
+                />
                 <button
                     type="button"
                     className="button_catalogo"
                     style={{ backgroundColor: "#146439ef" }}
-                    onClick={() => navigate("/")}
+                    onClick={handleLogout}
                 >
                     <FontAwesomeIcon icon={faRightFromBracket} />
                 </button>
