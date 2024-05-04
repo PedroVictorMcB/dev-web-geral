@@ -14,9 +14,9 @@ export default function Cursos() {
     useEffect(() => {
         const fetchCursos = async () => {
             const responseCursos = await fetch(
-                `http://localhost:3001/cursos?id=${query.get("cursoId")}`
+                `http://localhost:3001/cursos/${query.get("cursoId")}`
             );
-            const dataCurso = (await responseCursos.json())[0];
+            const dataCurso = await responseCursos.json();
 
             const responseAulas = await fetch(
                 `http://localhost:3001/aulas?cursoId=${query.get("cursoId")}`

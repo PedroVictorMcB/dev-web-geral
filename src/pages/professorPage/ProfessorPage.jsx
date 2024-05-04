@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import server from "../../server.json";
-import { useCookies } from "react-cookie";
+import useAppCookies from "../../Hooks/useAppCookies";
 
 export default function ProfessorPage() {
     const [title, setTitle] = useState("");
@@ -10,7 +10,7 @@ export default function ProfessorPage() {
     const [descricao, setDescricao] = useState("");
     const navigate = useNavigate();
 
-    const [cookies, setCookie, removeCookie] = useCookies();
+    const { cookies } = useAppCookies();
 
     //Este estado, da linha 15:17, define o nome do site lá na aba de cima, não precisa estar em todas as páginas, apenas no APP, uma vez que o site possui apenas um nome, e não vários. Isso evitará de confundir o usuário.
     //Farei esta alteração em todas a página que encontrar este useEffect, e não mudem, PFV.

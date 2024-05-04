@@ -68,61 +68,61 @@
             "id": "1",
             "cursoId": "1",
             "title": "Introdução",
-            "video": "https://www.youtube.com/embed/watch?v=FXqX7oof0I4&list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO",
+            "video": "FXqX7oof0I4",
             "descricao": "Neste vídeo você vai conhecer o projeto que vamos desenvolver no curso de #React"
         },
         {
             "id": "2",
             "cursoId": "1",
             "title": "Como instalar",
-            "video": "https://www.youtube.com/embed/watch?v=Jg6JaEjovJk&list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO&index=2",
+            "video": "Jg6JaEjovJk",
             "descricao": "Nesta aula você vai aprender a instalar e também rodar uma aplicação em #React"
         },
         {
             "id": "3",
             "cursoId": "1",
             "title": "Entendendo JSX",
-            "video": "https://www.youtube.com/embed/watch?v=9iKNxnFJY_Q&list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO&index=3",
+            "video": "9iKNxnFJY_Q",
             "descricao": "Nesta aula você vai aprender o que é e para que é utilizado o React"
         },
         {
             "id": "4",
             "cursoId": "1",
             "title": "Criando componentes",
-            "video": "https://www.youtube.com/embed/watch?v=-wrsG0IGc-M&list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO&index=4",
+            "video": "-wrsG0IGc-M",
             "descricao": "Nesta aula você vai aprender a criar componentes e entender para que eles servem"
         },
         {
             "id": "5",
             "cursoId": "1",
             "title": "Trabalhando com Props",
-            "video": "https://www.youtube.com/embed/watch?v=ZLtBdpwg8tI&list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO&index=5",
+            "video": "ZLtBdpwg8tI",
             "descricao": "Neste vídeo você vai aprender sobre as props em #React"
         },
         {
             "title": "JavaSeLascar",
-            "video": "https://www.youtube.com/watch?v=b8ihgyam1Xc",
+            "video": "b8ihgyam1Xc",
             "descricao": "Aprenda em Java",
             "cursoId": "5",
             "id": "2KWTU7Z"
         },
         {
             "title": "pqp",
-            "video": "https://www.youtube.com/watch?v=b8ihgyam1Xc",
+            "video": "b8ihgyam1Xc",
             "descricao": "eeeeeba",
             "cursoId": "5",
             "id": "2ev90LJ"
         },
         {
             "title": "Aula 1 Vamos começar",
-            "video": "https://www.youtube.com/watch?v=b8ihgyam1Xc",
+            "video": "b8ihgyam1Xc",
             "descricao": "Vamos começar agora",
             "cursoId": "6",
             "id": "G1Lq27m"
         },
         {
             "title": "aula 1",
-            "video": "https://www.youtube.com/watch?v=b8ihgyam1Xc",
+            "video": "b8ihgyam1Xc",
             "descricao": "kokokokokoko",
             "cursoId": "7",
             "id": "JVCBX0n"
@@ -136,14 +136,14 @@
         },
         {
             "title": "aula 2",
-            "video": "https://www.youtube.com/watch?v=b8ihgyam1Xc",
+            "video": "b8ihgyam1Xc",
             "descricao": "jujujujujuju",
             "cursoId": "7",
             "id": "99HTLR4"
         },
         {
             "title": "Aula 1",
-            "video": "https://www.youtube.com/watch?v=DuDz6B4cqVc",
+            "video": "DuDz6B4cqVc",
             "descricao": "Aprenda Estrutura e seja Feliz!",
             "cursoId": "8",
             "id": "l2aQGx-"

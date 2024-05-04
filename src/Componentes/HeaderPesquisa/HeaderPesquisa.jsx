@@ -5,13 +5,13 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import { useCookies } from "react-cookie";
+import useAppCookies from "../../Hooks/useAppCookies";
 
 function HeaderPesquisa({ onSearch }) {
     const [user, setUser] = useState(null);
 
     const navigate = useNavigate();
-    const [cookies, setCookie, removeCookie] = useCookies();
+    const { cookies, removeCookie } = useAppCookies();
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -36,6 +36,7 @@ function HeaderPesquisa({ onSearch }) {
 
     const handleLogout = () => {
         removeCookie("user-info");
+        removeCookie("aulas-finalizadas");
         navigate("/");
     };
 
