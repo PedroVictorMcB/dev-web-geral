@@ -35,9 +35,9 @@ function Login() {
 
                 console.log(data);
                 if (data?.tag === "aluno") {
-                    navigate("/catalogoDeCursos");
-                } else {
                     navigate("/professors");
+                } else {
+                    navigate("/catalogoDeCursos");
                 }
             } catch (error) {
                 console.error("Erro ao obter dados dos usuários:", error);
