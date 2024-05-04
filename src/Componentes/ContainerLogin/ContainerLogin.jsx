@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../ContainerLogin/ContainerLogin.css";
 import logo from "../../Assets/Imagens/CodeAcademyLogoSemFundo.png";
 import google from "../../Assets/Imagens/SignGoogle.png";
+import { useCookies } from "react-cookie";
 //criar um objeto user logo no inicio
 
 function Login() {
@@ -10,6 +11,7 @@ function Login() {
     const [password, setPassword] = useState("");
     const [failedLogin, setFailedLogin] = useState(false);
     const navigate = useNavigate();
+    const [cookies, setCookie] = useCookies();
 
     //Este estado, da linha 17:19, define o nome do site lá na aba de cima, não precisa estar em todas as páginas, apenas no APP, uma vez que o site possui apenas um nome, e não vários. Isso evitará de confundir o usuário.
     //Farei esta alteração em todas a página que encontrar este useEffect, e não mudem, PFV.
@@ -17,6 +19,18 @@ function Login() {
     // useEffect(() => {
     //     document.title = "Login";
     // }, []);
+
+    useEffect(() => {
+        if (cookies["user-info"]) {
+            const userTag = cookies["user-info"]?.tag;
+
+            if (userTag === "professor") {
+                navigate("/professors");
+            } else {
+                navigate("/catalogoDeCursos");
+            }
+        }
+    }, [navigate, cookies]);
 
     const handleLogin = React.useCallback(
         async (event) => {
@@ -34,17 +48,25 @@ function Login() {
                 }
 
                 console.log(data);
+
+                setCookie("user-info", {
+                    id: data?.id,
+                    nome: data?.nome,
+                    email: data?.email,
+                    tag: data?.tag,
+                });
+
                 if (data?.tag === "aluno") {
-                    navigate("/catalogoDeCursos");
-                } else {
                     navigate("/professors");
+                } else {
+                    navigate("/catalogoDeCursos");
                 }
             } catch (error) {
                 console.error("Erro ao obter dados dos usuários:", error);
                 alert("Ocorreu um erro ao tentar fazer login.");
             }
         },
-        [email, navigate, password]
+        [email, navigate, password, setCookie]
     );
 
     return (

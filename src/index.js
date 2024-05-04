@@ -23,10 +23,11 @@ ReactDOM.render(
                 <Route path="testes" element={<Teste />} />
                 {/* adicionar footer em CatalogoCursos */}
                 <Route path="catalogoDeCursos" element={<CatalogoCursos />} />
+                {/* FAVOR manter o header e footer nestas páginas, para evitar percar de identidade UX */}
                 <Route element={<DefaultTemplate />}>
                     <Route path="/" element={<Main />} />
-                    <Route path="cursos" element={<Cursos />} />
                     <Route path="professors" element={<ProfessorPage />} />
+                    <Route path="cursos" element={<Cursos />} />
                     <Route
                         path="professorAddAula"
                         element={<ProfessorAddAula />}
