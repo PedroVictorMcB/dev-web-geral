@@ -1,6 +1,16 @@
+import React, { useMemo } from "react";
 import "./Sidebar.css";
 import logo from "../../Assets/Imagens/CodeAcademyLogoSemFundo.png";
+import useAppCookies from "../../Hooks/useAppCookies";
+
 const Sidebar = ({ curso, aulas, onChangeAula }) => {
+    const { cookies } = useAppCookies();
+
+    const aulaInfo = useMemo(
+        () => cookies["aulas-finalizadas"] || [],
+        [cookies]
+    );
+
     //este componente está recebendo e renderizando
     return (
         <div className="sidebar">
@@ -16,7 +26,14 @@ const Sidebar = ({ curso, aulas, onChangeAula }) => {
                         <span className="course-title">{curso?.title}</span>
                         <ul className="aula-list">
                             {aulas?.map((aula) => (
-                                <li key={aula?.id} className="aula-item">
+                                <li
+                                    key={aula?.id}
+                                    className={`aula-item${
+                                        aulaInfo.includes(aula?.id)
+                                            ? " viewed"
+                                            : ""
+                                    }`}
+                                >
                                     <button
                                         className="video-button"
                                         // aqui o onchange está fazendo a mesma coisa que o setSelectedAula em Cursos. Melhora a escrita

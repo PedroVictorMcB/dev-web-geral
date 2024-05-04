@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import CursosBox from "../Componentes/BlocoCurso/BlocoCurso";
 import Flooter from "../Componentes/Flooter/Flooter";
-import { useCookies } from "react-cookie";
+import useAppCookies from "../Hooks/useAppCookies";
 import { useNavigate } from "react-router-dom";
 
 export default function CatalogodeCursos() {
-    const [cookies, setCookie, removeCookie] = useCookies();
+    const { cookies } = useAppCookies();
     const navigate = useNavigate();
 
     useEffect(() => {
