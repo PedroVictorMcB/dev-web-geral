@@ -6,6 +6,8 @@ import useQuery from "../../Hooks/useQuery";
 export default function ProfessorAddAula() {
     const query = useQuery();
     const [failedToAdd, setFailedToAdd] = useState(null);
+    const [addedAula, setAddedAula] = useState(null);
+    const [aulaId, setAulaId] = useState(null);
 
     const initialFormData = {
         title: "",
@@ -28,10 +30,15 @@ export default function ProfessorAddAula() {
                 body: JSON.stringify({
                     ...formData,
                     cursoId: query.get("cursoId"),
+                    video: extrairIdDoVideo(formData.video), // Extrai o ID do vídeo do URL
                 }),
             });
 
             if (response.ok) {
+                const data = await response.json();
+                // Armazena os dados da aula adicionada e seu ID
+                setAddedAula(formData);
+                setAulaId(data.id);
                 // reset fields from add aula
                 resetForm();
                 setFailedToAdd(false);
@@ -44,9 +51,41 @@ export default function ProfessorAddAula() {
         }
     };
 
-    // useEffect(() => {
-    //     document.title = "AddCurso";
-    // }, []);
+    const handleRemoveAula = async () => {
+        if (!aulaId) return;
+
+        try {
+            // Faz uma solicitação DELETE para remover a aula do servidor
+            const response = await fetch(`http://localhost:3001/aulas/${aulaId}`, {
+                method: "DELETE",
+            });
+
+            if (response.ok) {
+                // Remove os dados da aula
+                setAddedAula(null);
+                setAulaId(null);
+            } else {
+                console.error("Erro ao remover aula do servidor");
+            }
+        } catch (error) {
+            console.error("Erro ao enviar solicitação DELETE:", error);
+        }
+    };
+
+    function extrairIdDoVideo(url) {
+        const regex = /[?&]v=([^?&]+)/;
+        const match = url.match(regex);
+        if (match && match[1]) {
+            const videoId = match[1];
+            const index = videoId.indexOf("&");
+            if (index !== -1) {
+                return videoId.substring(0, index);
+            } else {
+                return videoId;
+            }
+        }
+        return null;
+    }
 
     return (
         <div>
@@ -85,16 +124,27 @@ export default function ProfessorAddAula() {
                                 ""
                             )}
 
-                            <input type="text" disabled="disabled" />
+                            {addedAula && (
+                                <div>
+                                    <p>Aula adicionada:</p>
+                                    <p>Título: {addedAula.title}</p>
+                                    <p>Vídeo: {addedAula.video}</p>
+                                    <p>Descrição: {addedAula.descricao}</p>
+                                </div>
+                            )}
+
                             <button type="submit" className="addCurso-btn">
                                 Adicionar
                             </button>
                         </form>
                     </div>
                 </div>
-                <div className="container-editCursos">
-                    <h3>Editar um Curso</h3>
-                    <div className="container-editOptions"></div>
+                <div className="container-editAula">
+                    <div className="container-editOptions">
+                        {addedAula && (
+                            <button onClick={handleRemoveAula}>Remover Aula</button>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

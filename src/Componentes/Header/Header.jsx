@@ -13,7 +13,6 @@ function Cabecalho() {
 
       <div className="__acessos">
         <nav className="Controle_Usuario">
-          <button className="catalogoCursos" onClick={() => navigate('/CatalogodeCursos')}> Catalogo de Cursos </button>
 
           <button className="cadastro" onClick={() => navigate('/cadastro') }>Cadastrar</button>
 
