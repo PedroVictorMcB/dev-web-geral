@@ -6,19 +6,19 @@ import { useNavigate } from "react-router-dom";
 import server from "../../server.json";
 
 function Cadastro() {
+    //uso do useState padrão
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [image, setImage] = useState("");
+    const [tag, setTag] = useState("aluno");
     const navigate = useNavigate();
 
-    //Este estado, da linha 18:20, define o nome do site lá na aba de cima, não precisa estar em todas as páginas, apenas no APP, uma vez que o site possui apenas um nome, e não vários. Isso evitará de confundir o usuário.
-    //Farei esta alteração em todas a página que encontrar este useEffect, e não mudem, PFV.
-
-    // useEffect(() => {
-    //     document.title = "Cadastro";
-    // }, []);
+    //criei um handler para a tag do usuário
+    const handleTagSelector = (e) => {
+        setTag(e.target.value);
+    };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -35,6 +35,7 @@ function Cadastro() {
             email: email,
             senha: password,
             image: image,
+            tag: tag,
         };
 
         try {
@@ -49,7 +50,7 @@ function Cadastro() {
 
             if (response.ok) {
                 alert("Usuário cadastrado com sucesso!");
-                navigate("/catalogoDeCursos");
+                navigate("/login");
             } else {
                 alert("Ocorreu um erro ao cadastrar o usuário.");
             }
@@ -114,6 +115,23 @@ function Cadastro() {
                             placeholder="Confirme sua senha"
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
+                        />
+                        <label htmlFor="professorTag">Professor</label>
+                        <input
+                            type="radio"
+                            id="professorTag"
+                            name="tag"
+                            value="professor"
+                            onChange={handleTagSelector}
+                        />
+                        <label htmlFor="alunoTag">Aluno</label>
+                        <input
+                            type="radio"
+                            id="alunoTag"
+                            name="tag"
+                            value="aluno"
+                            checked
+                            onChange={handleTagSelector}
                         />
                         <input
                             type="submit"

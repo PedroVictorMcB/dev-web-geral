@@ -1,12 +1,33 @@
-export default function Input ({name: fieldName, label, type, placeholder, formData, setFormData}) {
+export default function Input({
+    name: fieldName,
+    label,
+    type,
+    placeholder,
+    formData,
+    setFormData,
+}) {
+    //aqui é feita uma atualização do formData
+    const updateFormData = (e) =>
+        setFormData({
+            //acima set funciona como se fosse um PUT
 
-    const updateFormData = (e) => setFormData({
-        ...formData,
-        [fieldName]: e.target.value,
-    });
+            //spread = resgata as informações atuais
+            ...formData,
+            //atualiza as chaves específicas
+            [fieldName]: e.target.value,
+        });
 
-    return <>
-        <label htmlFor={fieldName}>{label}</label>
-        <input type={type || "text"} id={fieldName} name={fieldName} placeholder={placeholder} onChange={updateFormData} value={formData[fieldName]} />
-    </>
+    return (
+        <>
+            <label htmlFor={fieldName}>{label}</label>
+            <input
+                type={type || "text"}
+                id={fieldName}
+                name={fieldName}
+                placeholder={placeholder}
+                onChange={updateFormData}
+                value={formData[fieldName]}
+            />
+        </>
+    );
 }

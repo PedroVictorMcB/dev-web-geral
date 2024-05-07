@@ -10,14 +10,8 @@ export default function ProfessorPage() {
     const [descricao, setDescricao] = useState("");
     const navigate = useNavigate();
 
+    //obj cookies resgata todas as infos de cookies desta url
     const { cookies } = useAppCookies();
-
-    //Este estado, da linha 15:17, define o nome do site lá na aba de cima, não precisa estar em todas as páginas, apenas no APP, uma vez que o site possui apenas um nome, e não vários. Isso evitará de confundir o usuário.
-    //Farei esta alteração em todas a página que encontrar este useEffect, e não mudem, PFV.
-
-    // useEffect(() => {
-    //     document.title = "AddCurso";
-    // }, []);
 
     useEffect(() => {
         if (cookies["user-info"]) {
@@ -30,6 +24,7 @@ export default function ProfessorPage() {
             navigate("/login");
         }
     }, [navigate, cookies]);
+    //dependencias acima
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -118,7 +113,7 @@ export default function ProfessorPage() {
                                 type="text"
                                 id="descricao"
                                 name="descricao"
-                                placeholder="Insira o tempo total do curso completo"
+                                placeholder="Descreva seu curso aqui"
                                 value={descricao}
                                 onChange={(e) => setDescricao(e.target.value)}
                             />

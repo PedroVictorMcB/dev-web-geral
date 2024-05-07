@@ -5,9 +5,9 @@ import useQuery from "../../Hooks/useQuery";
 
 export default function ProfessorAddAula() {
     const query = useQuery();
-    const [failedToAdd, setFailedToAdd] = useState(null);
     const [addedAula, setAddedAula] = useState(null);
     const [aulaId, setAulaId] = useState(null);
+    const [failedToAdd, setFailedToAdd] = useState(null);
 
     const initialFormData = {
         title: "",
@@ -56,9 +56,12 @@ export default function ProfessorAddAula() {
 
         try {
             // Faz uma solicitação DELETE para remover a aula do servidor
-            const response = await fetch(`http://localhost:3001/aulas/${aulaId}`, {
-                method: "DELETE",
-            });
+            const response = await fetch(
+                `http://localhost:3001/aulas/${aulaId}`,
+                {
+                    method: "DELETE",
+                }
+            );
 
             if (response.ok) {
                 // Remove os dados da aula
@@ -142,7 +145,9 @@ export default function ProfessorAddAula() {
                 <div className="container-editAula">
                     <div className="container-editOptions">
                         {addedAula && (
-                            <button onClick={handleRemoveAula}>Remover Aula</button>
+                            <button onClick={handleRemoveAula}>
+                                Remover Aula
+                            </button>
                         )}
                     </div>
                 </div>
