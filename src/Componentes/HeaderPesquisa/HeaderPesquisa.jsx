@@ -31,6 +31,7 @@ function HeaderPesquisa({ onSearch }) {
 
     const identificadorPesquisa = (event) => {
         const searchTerm = event.target.value;
+
         onSearch(searchTerm);
     };
 
@@ -44,14 +45,16 @@ function HeaderPesquisa({ onSearch }) {
         <div className="CabecalhoP">
             <img src={logo} alt="Logo" className="CabecalhoP__logo" />
 
-            <div className="Barra-Pesquisa">
-                <input
-                    type="text"
-                    className="input_pesquisa"
-                    placeholder="Pesquisar curso..."
-                    onChange={identificadorPesquisa}
-                />
-            </div>
+            {onSearch && (
+                <div className="Barra-Pesquisa">
+                    <input
+                        type="text"
+                        className="input_pesquisa"
+                        placeholder="Pesquisar curso..."
+                        onChange={identificadorPesquisa}
+                    />
+                </div>
+            )}
 
             <div className="user-info">
                 {user && (

@@ -37,7 +37,7 @@ export default function ProfessorPage() {
         const newCurso = {
             id: server.cursos.length + 1,
             title,
-            instructor: "",
+            instructor: cookies["user-info"].nome,
             duration,
             descricao,
             image,
