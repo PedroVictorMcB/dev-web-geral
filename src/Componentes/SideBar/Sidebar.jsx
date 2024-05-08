@@ -1,11 +1,8 @@
 import React, { useMemo } from "react";
 import "./Sidebar.css";
 import logo from "../../Assets/Imagens/CodeAcademyLogoSemFundo.png";
-import useAppCookies from "../../Hooks/useAppCookies";
 
-const Sidebar = ({ curso, aulas, onChangeAula }) => {
-    const { cookies } = useAppCookies();
-
+const Sidebar = ({ curso, aulas, onChangeAula, cookies }) => {
     const aulaInfo = useMemo(
         () => cookies["aulas-finalizadas"] || [],
         [cookies]

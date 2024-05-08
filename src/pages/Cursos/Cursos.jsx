@@ -3,6 +3,7 @@ import Sidebar from "../../Componentes/SideBar/Sidebar";
 import VideoCatalogo from "../../Componentes/VideoCatalago/VideoCatalogo";
 import "../Cursos/cursos.css";
 import useQuery from "../../Hooks/useQuery";
+import useAppCookies from "../../Hooks/useAppCookies";
 
 export default function Cursos() {
     const [curso, setCurso] = useState({});
@@ -10,6 +11,7 @@ export default function Cursos() {
     const [selectedAula, setSelectedAula] = useState({});
 
     const query = useQuery();
+    const { cookies, setCookie } = useAppCookies(["aulas-finalizadas"]);
 
     useEffect(() => {
         const fetchCursos = async () => {
@@ -34,17 +36,19 @@ export default function Cursos() {
     return (
         <>
             <div className="containerPageCursos">
-                {/* <div className='pageHeader'>
-                    <Cabecalho />
-                </div> */}
                 <div className="pageCursos">
                     <Sidebar
                         curso={curso}
                         aulas={aulas}
+                        cookies={cookies}
                         onChangeAula={setSelectedAula}
                     />
                     <div className="contentRelated">
-                        <VideoCatalogo selectedAula={selectedAula} />
+                        <VideoCatalogo
+                            selectedAula={selectedAula}
+                            cookies={cookies}
+                            setCookie={setCookie}
+                        />
                         {/* <VideoComents  /> */}
                     </div>
                 </div>

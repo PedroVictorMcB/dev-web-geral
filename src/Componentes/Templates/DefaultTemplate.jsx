@@ -1,14 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Flooter from "../Flooter/Flooter";
 import Cabecalho from "../Header/Header";
+import useAppCookies from "../../Hooks/useAppCookies";
+import HeaderPesquisa from "../HeaderPesquisa/HeaderPesquisa";
 
+export default function DefaultTemplate() {
+    const { cookies } = useAppCookies();
 
-export default function DefaultTemplate(){
-    return(
+    return (
         <>
-            <Cabecalho />
+            {cookies["user-info"] ? <HeaderPesquisa /> : <Cabecalho />}
             <Outlet />
             <Flooter />
         </>
-    )
+    );
 }

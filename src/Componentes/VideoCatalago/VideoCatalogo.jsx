@@ -1,12 +1,9 @@
 import "./VideoCatalogo.css";
 import YouTube from "react-youtube";
 import React from "react";
-import useAppCookies from "../../Hooks/useAppCookies";
 
-const VideoCatalogo = ({ selectedAula }) => {
+const VideoCatalogo = ({ selectedAula, cookies, setCookie }) => {
     // Este componentes está recebendo como propriedade o selectedAula de cursos, este recebe as atts de sidebar, e o videoCatalogo renderiza tudo.
-
-    const { cookies, setCookie } = useAppCookies();
 
     // aulasCookie recebe toda a informação do cookie "aulas-finalizadas".
     // O useMemo otimiza a performance evitando que essa busca seja realizada a todo momento que o

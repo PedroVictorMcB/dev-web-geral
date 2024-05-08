@@ -4,7 +4,7 @@ import HeaderPesquisa from "../HeaderPesquisa/HeaderPesquisa";
 import { useNavigate } from "react-router-dom";
 
 function CursoBox({ curso }) {
-    const { image, title, instructor, duration, id } = curso;
+    const { image, title, instructor, duration, id, descricao } = curso;
 
     const navigate = useNavigate();
 
@@ -15,6 +15,7 @@ function CursoBox({ curso }) {
                 <h2>{title}</h2>
                 <p>Professor: {instructor}</p>
                 <p>Duração: {duration}</p>
+                <p>Descrição: {descricao}</p>
             </div>
 
             <button onClick={() => navigate(`/cursos?cursoId=${id}`)}>
