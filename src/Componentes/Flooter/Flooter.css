@@ -1,7 +1,20 @@
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    bottom: 0;
+  background-color: #9df3c4;
+  color: #1fab89;
+  text-align: center;
+  padding: 20px;
+
+  bottom: 0;
+  border-radius: 20px 20px 0px 0px;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+footer img {
+  width: 150px;
 }

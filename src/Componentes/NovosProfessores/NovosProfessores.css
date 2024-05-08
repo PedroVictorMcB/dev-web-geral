@@ -1,14 +1,43 @@
-.Novos_professores {
-    background-color: #d9d9d9;
-    padding: 20px;
-    text-align: center;
-    font-size: large;
+.ContainerNovosProfessores {
+  background-color: #9df3c4;
+  padding: 20px;
+  text-align: center;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  padding-left: 120px;
+  padding: 30px 20px;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
-.Professor_info {
-    width: 100%;
+.ContainerNovosProfessores .ContainerTexts {
+  color: #0b7077;
+  text-align: left;
+  width: 40vw;
 }
 
-.Professor_info p {
-    width: 80%;
+.ContainerNovosProfessores .subtitle {
+  color: #1fab89;
+  font-size: 15px;
+  font-family: Inter ", sans-serif; ";
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ContainerNovosProfessores .title {
+  color: #0b7077;
+  font-size: 30px;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 30px;
+  margin-top: -6px;
+}
+
+.Novos_professores_contactar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

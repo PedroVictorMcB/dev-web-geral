@@ -1,12 +1,26 @@
-.ContainerInformacoes {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-    background-color: #f2f2f2;
-    font-size: large;
+.ContainerInformacoes .Titulo {
+  font-family: "Anonymous Pro", monospace;
+  font-size: 28px;
+  padding-top: 50px;
+  color: #1fab89;
+  font-weight: bolder;
+  text-align: center;
 }
 
+.ContainerPerguntasRespostas {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+  font-size: large;
+}
 .Perguntas {
-    font-size: large;
+  color: #1fab89;
+  font-size: large;
+  font-family: Inter, sans-serif;
+}
+
+.Pergunta {
+  font-weight: bolder;
 }

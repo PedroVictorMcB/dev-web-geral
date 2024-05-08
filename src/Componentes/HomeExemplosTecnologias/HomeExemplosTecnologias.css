@@ -1,0 +1,53 @@
+.ContainerTecnologias {
+  color: #1fab89;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: bolder;
+  font-size: 28px;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.ContainerTecnologias .Titulo {
+  font-size: 28px;
+  padding-bottom: 20px;
+}
+.ContainerExemplos {
+  padding-top: 30px;
+  display: flex;
+  padding-top: 30px;
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+.ContainerExemplos .exemplo {
+  width: 20%;
+  height: 200px;
+  box-shadow: 0 6.67px 40px rgba(38, 45, 118, 0.08);
+  border-radius: 20px;
+}
+
+.ContainerExemplos .ContainerImg {
+  height: 140px;
+  color: aqua;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+
+.ContainerExemplos .ContainerImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ContainerExemplos .tituloTecnologia {
+  padding-top: 20px;
+  font-size: 22px;
+}
+
+.ContainerTecnologias .subtitle {
+  padding-top: 40px;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  padding-bottom: 25px;
+}

@@ -1,68 +1,57 @@
-.Apresentacao {
-    text-align: center;
-    padding: 20px;
-    margin-top: 100px;
+.ContainerApresentacao {
+  background-color: #9df3c4;
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ContainerBoasVindas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+  padding-left: 120px;
 }
 
-.Logo {
-    display: flex;
-    gap: 45px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+.Texts_BoasVindas .subtitle {
+  color: #1fab89;
+  font-size: 15px;
+  font-family: Inter ", sans-serif; ";
+  font-weight: 700;
+  font-style: normal;
 }
 
-.Logo img {
-    max-width: 280px;
+.Texts_BoasVindas .title {
+  color: #0b7077;
+  font-size: 30px;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 30px;
+  margin-top: -6px;
 }
 
-.Titulo h1,
-.Titulo h2,
-.Titulo h3 {
-    margin: 10px 0;
-    font-weight: 100;
+.ContainerImg {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.Apresentacao_Img {
+  height: auto;
+  max-height: 80%;
+  width: auto;
+  object-fit: contain;
 }
 
-.titulo_principal {
-    font-size: 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.button {
+  background-color: #1fab89;
+  font-family: "Inter", sans-serif;
+  border: none;
+  padding: 15px 7vw;
+  margin: 0 10px;
+  border-radius: 15px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  align-self: center;
+  font-size: 20px;
 }
-.Cursos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0;
-}
-
-.Curso {
-    background-color: #e6e6e6;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.ContainerVideo {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.Video {
-    background: #dfdfdf;
-    padding: 32px;
-    border-radius: 25px;
-}
-
-.divisor {
-    width: 80%;
-    height: 2px;
-    background: #00000042;
-    border-radius: 97px;
-    margin-top: 25px;
-    margin-bottom: 35px;
-}
-
-
