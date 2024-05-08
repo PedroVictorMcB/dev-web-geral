@@ -16,11 +16,9 @@ const NovosProfessores = () => {
   return (
     <div className="ContainerNovosProfessores">
       <div className="ContainerTexts">
-        <h3 className="subtitle">Venha para melhor!</h3>
+        <h3 className="subtitle">Junte-se a nós</h3>
 
-        <h1 className="title">
-          Desbloqueie seu potencial com nossos cursos de programação!
-        </h1>
+        <h1 className="title">Venha ser um de nossos professores!</h1>
       </div>
 
       <nav className="Novos_professores_contactar">
