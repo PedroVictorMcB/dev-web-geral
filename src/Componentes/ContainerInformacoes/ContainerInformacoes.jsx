@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../ContainerInformacoes/ContainerInformacoes.css";
 import FlatCharacter from "../../Assets/Imagens/Home/flat-character.svg";
 
@@ -6,9 +6,8 @@ function Faq() {
   return (
     <div className="ContainerInformacoes">
       <div className="Titulo">Perguntas Frequentes</div>
-
       <div className="ContainerPerguntasRespostas">
-        <img src={FlatCharacter} alt="" />
+        <img src={FlatCharacter} alt="Flat Character Image" />
         <div className="Perguntas">
           <div className="Perguntas_frequentes">
             <p className="Pergunta">Como faço para iniciar?</p>
@@ -22,7 +21,7 @@ function Faq() {
 
             <p className="Pergunta">Os Cursos possuem certificados?</p>
             <p className="Resposta">
-              Sim, Todos nossos Cursos possuem certificado.
+              Sim, todos nossos cursos possuem certificado.
             </p>
 
             <p className="Pergunta">
