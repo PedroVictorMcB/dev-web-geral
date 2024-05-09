@@ -47,6 +47,7 @@ input[type="button"] {
   background-color: #ffffff; /* Explicitly set background color */
   -webkit-box-shadow: 0 0 0px 1000px rgb(157, 243, 196) inset !important; /* Override autofill color */
   -webkit-text-fill-color: #333 !important; /* Ensure text color remains consistent */
+  font-size: 15px !important;
 }
 
 .button_registrar_login {
