@@ -18,3 +18,13 @@ input[type="submit"]:focus,
 input[type="button"]:focus {
   outline: none;
 }
+
+body {
+  min-width: 500px; /* Define o mínimo de largura para o corpo inteiro da página */
+}
+
+@media (max-width: 200px) {
+  body {
+    overflow-x: scroll; /* Adiciona uma barra de rolagem horizontal se a largura for menor que 200px */
+  }
+}

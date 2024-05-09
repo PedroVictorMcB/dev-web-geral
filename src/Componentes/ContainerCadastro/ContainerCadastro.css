@@ -49,13 +49,6 @@ label {
   border: 1px solid #ccc;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="submit"]:focus,
-input[type="button"]:focus {
-  outline: none;
-}
-
 .button_registrar_cadastro {
   background-color: #146439ef;
   color: white;

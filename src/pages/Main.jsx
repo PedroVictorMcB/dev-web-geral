@@ -9,10 +9,13 @@ import Flooter from "../Componentes/Flooter/Flooter";
 export default function Main() {
   return (
     <div style={{ minHeight: "100vh" }}>
+      {/*
       <Apresentacao />
       <HomeExemplosTecnologias />
       <NovosProfessores />
       <Faq />
+      */}
+
       {/*       
       
       <div

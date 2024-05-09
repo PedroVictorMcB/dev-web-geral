@@ -5,13 +5,12 @@ import useAppCookies from "../../Hooks/useAppCookies";
 import HeaderPesquisa from "../HeaderPesquisa/HeaderPesquisa";
 
 export default function DefaultTemplate() {
-    const { cookies } = useAppCookies();
+  const { cookies } = useAppCookies();
 
-    return (
-        <>
-            {cookies["user-info"] ? <HeaderPesquisa /> : <Cabecalho />}
-            <Outlet />
-            <Flooter />
-        </>
-    );
+  return (
+    <>
+      {cookies["user-info"] ? <HeaderPesquisa /> : <Cabecalho />}
+      <Outlet />
+    </>
+  );
 }

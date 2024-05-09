@@ -6,6 +6,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
 .ContainerBoasVindas {
   display: flex;
   flex-direction: column;
@@ -54,4 +55,10 @@
   max-width: fit-content;
   align-self: center;
   font-size: 20px;
+}
+
+@media (max-width: 500px) {
+  .ContainerImg {
+    display: none; /* Esconde todas as imagens na tela */
+  }
 }

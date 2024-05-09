@@ -8,9 +8,11 @@ function Cabecalho() {
   const navigate = useNavigate();
   return (
     <div className="Cabecalho">
-      <Link to="/">
-        <img src={NomelogoSemFundo} alt="" />
-      </Link>
+      <div className="ContainerLogo">
+        <Link to="/">
+          <img src={NomelogoSemFundo} alt="" />
+        </Link>
+      </div>
 
       <div className="__acessos">
         <nav className="Controle_Usuario">
