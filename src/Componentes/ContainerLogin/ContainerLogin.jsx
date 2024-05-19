@@ -62,16 +62,20 @@ function Login() {
   };
 
   return (
-    <>
-      <div className="centered-container-login">
-        <div className="container">
-          <div>
-            <img src={logo} alt="Logo Code Academy" />
-            <h2>Login</h2>
-          </div>
-          <form onSubmit={handleLogin}>
-            <label htmlFor="email">Digite seu E-mail:</label>
+    <div className="ContainerLoginPage">
+      <div className="ContainerLogin">
+        <div>
+          <img src={logo} alt="Logo Code Academy" />
+          <h2>Login</h2>
+        </div>
+
+        <form onSubmit={handleLogin}>
+          {/* E-MAIL */}
+          <label htmlFor="email">Digite seu E-mail:</label>
+
+          <div className="ContainerInputEmail">
             <input
+              className="email-input"
               type="text"
               id="email"
               name="email"
@@ -79,46 +83,49 @@ function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label htmlFor="password">Senha:</label>
-            <div className="ContainerInputSenha">
-              <i className="fa fa-lock icon"></i>
-              <input
-                type={showPassword ? "text" : "password"}
-                className="password-input"
-                placeholder="Digite sua senha"
-                id="password"
-                name="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <i
-                onClick={togglePasswordVisibility}
-                className={`fa ${
-                  showPassword ? "fa-eye-slash" : "fa-eye"
-                } icon`}
-              ></i>
-            </div>
-            {failedLogin && (
-              <p>
-                <strong>Usuário</strong> ou <strong>senha</strong> inválido. Por
-                favor, verifique as informações e tente novamente.
-              </p>
-            )}
-            <input type="submit" value="Entrar" className="button_login" />
-            <button
-              type="button"
-              className="button_registrar_login"
-              onClick={() => navigate("/cadastro")}
-            >
-              Cadastrar-se
-            </button>
-          </form>
-          <div className="Sign_modes">
-            <img src={google} alt="Sign in with Google" />
           </div>
+
+          {/* SENHA */}
+          <label htmlFor="password">Senha:</label>
+
+          <div className="ContainerInputSenha">
+            <i className="fa fa-lock icon"></i>
+            <input
+              type={showPassword ? "text" : "password"}
+              className="password-input"
+              placeholder="Digite sua senha"
+              id="password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <i
+              onClick={togglePasswordVisibility}
+              className={`fa ${showPassword ? "fa-eye-slash" : "fa-eye"} icon`}
+            ></i>
+          </div>
+
+          {failedLogin && (
+            <p>
+              <strong>Usuário</strong> ou <strong>senha</strong> inválido. Por
+              favor, verifique as informações e tente novamente.
+            </p>
+          )}
+          <input type="submit" value="Entrar" className="button_login" />
+          <button
+            type="button"
+            className="button_registrar_login"
+            onClick={() => navigate("/cadastro")}
+          >
+            Cadastrar-se
+          </button>
+        </form>
+
+        <div className="Sign_modes">
+          <img src={google} alt="Sign in with Google" />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
