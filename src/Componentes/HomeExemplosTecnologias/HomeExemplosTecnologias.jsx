@@ -11,8 +11,8 @@ function HomeExemplosTecnologias() {
   const tecnologias = [
     { id: 1, imgSrc: ExemploPython, title: "Python" },
     { id: 2, imgSrc: ExemploJava, title: "Java" },
-    { id: 3, imgSrc: ExemploReact, title: "JavaScript" },
-    { id: 4, imgSrc: ExemploKotlin, title: "React" },
+    { id: 3, imgSrc: ExemploReact, title: "React" },
+    { id: 4, imgSrc: ExemploKotlin, title: "Kotlin" },
   ];
 
   return (
