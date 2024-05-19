@@ -1,4 +1,5 @@
 import React from "react";
+
 import "../ContainerInformacoes/ContainerInformacoes.css";
 import FlatCharacter from "../../Assets/Imagens/Home/flat-character.svg";
 
@@ -24,7 +25,6 @@ function Faq() {
             <p className="Resposta">
               Sim, Todos nossos Cursos possuem certificado.
             </p>
-
             <p className="Pergunta">
               Quanto tempo demora a emissão de certificado?
             </p>

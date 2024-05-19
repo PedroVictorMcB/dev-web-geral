@@ -1,87 +1,142 @@
-.centered-container-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Base Layout */
+.ContainerLoginPage {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 }
 
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+/* Login Container Styles */
+.ContainerLogin {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  max-width: 400px;
+  padding: 20px;
+  width: 90%;
 }
 
-.container img {
-    display: block;
-    margin: 0 auto;
-    width: 140px;
+.ContainerLogin img {
+  display: block;
+  margin: 0 auto;
+  width: 140px;
 }
 
-.container h2 {
-    text-align: center;
-    color: #146439ef;
-    margin-bottom: 20px;
+.ContainerLogin h2 {
+  color: #146439ef;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
+/* Form Elements */
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
-input[type="text"],
+.ContainerLoginPage input[type="text"],
 input[type="password"],
-input[type="submit"],
 input[type="button"] {
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px !important;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 0px 1000px rgb(157, 243, 196) inset !important;
+  -webkit-text-fill-color: #333 !important;
+  text-align: center;
 }
 
+.ContainerLoginPage input[type="password"] {
+  letter-spacing: 3px;
+}
 
-.button_registrar_login {
-    background-color: #808080fc;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-    transform: none;
+/* Button Styles */
+.button_registrar_login,
+.button_login {
+  background-color: #808080fc;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  width: 100%;
 }
 
 .button_login {
-    background-color: #146439ef;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%
+  background-color: #146439ef;
 }
 
 .button_login:hover {
-    background-color: #005cbf;
+  background-color: #005cbf;
 }
 
+/* Icon Interactions */
+.fa-eye,
+.fa-eye-slash,
+.Sign_modes img {
+  cursor: pointer;
+}
+
+.fa-eye,
+.fa-eye-slash {
+  margin-left: 10px;
+}
+
+/* Password Input Container */
+.ContainerInputSenha {
+  align-items: center;
+  background-color: #9df3c4;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 10px 20px;
+  width: 270px;
+}
+
+.ContainerInputSenha .icon,
+.ContainerInputSenha .fa-lock {
+  color: #1fab89;
+  margin-right: 10px;
+}
+
+/* Email Input Container */
+.ContainerInputEmail {
+  align-items: center;
+  background-color: #9df3c4;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  padding: 10px 20px;
+  width: 270px;
+}
+
+.ContainerInputEmail .email-input {
+  background-color: #9df3c4;
+  border: none;
+  color: cadetblue;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  width: 80%;
+}
+
+/* Sign Modes Styles */
 .Sign_modes {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .Sign_modes img {
-    width: 200px;
-    cursor: pointer;
-    transition: transform 0.2s;
+  transition: transform 0.2s;
+  width: 200px;
 }
 
 .Sign_modes img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
