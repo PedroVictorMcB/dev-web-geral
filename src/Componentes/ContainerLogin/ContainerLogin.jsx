@@ -4,6 +4,8 @@ import "../ContainerLogin/ContainerLogin.css";
 import logo from "../../Assets/Imagens/CodeAcademyLogoSemFundo.png";
 import google from "../../Assets/Imagens/SignGoogle.png";
 import { useCookies } from "react-cookie";
+import axios from "axios";
+import { convertLength } from "@mui/material/styles/cssUtils";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -15,6 +17,15 @@ function Login() {
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+
+  const verificaTags = (data) => {
+    if (data.professor === true) {
+      return "professor";
+    }
+    if (data.aluno === true) {
+      return "aluno";
+    }
   };
 
   useEffect(() => {
@@ -31,10 +42,12 @@ function Login() {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch(
-        `http://localhost:3001/usuarios?email=${email}&senha=${password}`
-      );
-      const data = (await response.json())[0];
+      const login = { email: email, senha: password };
+      const url = `http://localhost:8080/login`;
+      const response = await axios.post(url, login);
+      // console.log(response.data);
+
+      const data = response.data;
       if (!data || data.length === 0) {
         setFailedLogin(true);
         setPassword("");
@@ -45,19 +58,19 @@ function Login() {
             id: data.id,
             nome: data.nome,
             email: data.email,
-            tag: data.tag,
+            tag: verificaTags(data),
           },
           { path: "/" }
         );
-        if (data.tag === "aluno") {
+        if (verificaTags(data) === "aluno") {
           navigate("/professors");
         } else {
           navigate("/catalogoDeCursos");
         }
       }
     } catch (error) {
-      console.error("Erro ao obter dados dos usuários:", error);
-      alert("Ocorreu um erro ao tentar fazer login.");
+      console.error("Erro ao Logar:", error);
+      alert("Nenhum Usuario Encontrado!");
     }
   };
 
