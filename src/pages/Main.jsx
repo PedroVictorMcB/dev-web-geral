@@ -13,21 +13,6 @@ export default function Main() {
       <HomeExemplosTecnologias />
       <NovosProfessores />
       <Faq />
-      {/*       
-      
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginTop: "20px",
-          flexWrap: "wrap",
-        }}
-      >
-        {" "}
-        {}
-
-        
-      </div> */}
     </div>
   );
 }

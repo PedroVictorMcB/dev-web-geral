@@ -1,19 +1,19 @@
-.Container_h1{
+.Container_h1 {
   margin-left: 50px;
 }
 
-.Container_CursoBox{
+.Container_CursoBox {
   display: grid;
   justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr;
   margin-left: 50px;
 }
 
 .CursoBox-list {
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   flex-wrap: wrap;
-  margin: -10px; 
+  margin: -10px;
 }
 
 .CursoBox {
@@ -27,35 +27,32 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-
-button {
+.CursoBox button {
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
-button:hover {
+.CursoBox button:hover {
   background-color: #0056b3;
 }
 
 @media (max-width: 960px) {
- 
   .CursoBox {
     width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 600px) {
-
-  .info_curso{
+  .info_curso {
     margin-top: 10px;
   }
 
-  button {
+  .CursoBox button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -63,12 +60,12 @@ button:hover {
     padding: 10px 20px;
     cursor: pointer;
   }
-  
-  button:hover {
+
+  .CursoBox button:hover {
     background-color: #0056b3;
   }
 
-  .Container_h1{
+  .Container_h1 {
     text-align: center;
     font-size: large;
   }
